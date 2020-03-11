@@ -42,6 +42,17 @@ File: Layout CSS
 #topbar {
     padding: 15px 0;
     text-transform: uppercase;
+    transition: top 0.2s ease-in-out;
+    z-index: 9999;
+    transform: translateY(0)
+}
+
+.topbar-up {
+    top: -55px;
+}
+
+.scrollUp {
+    transform: translateY(-80px)
 }
 
 #topbar ul li {
@@ -144,8 +155,21 @@ File: Layout CSS
 #header #logo h1 {
     margin: 0;
     padding: 0;
-    font-size: 40px;
+    font-size: 42px;
     text-transform: uppercase;
+    display: block;
+    /* font-weight: 500; */
+}
+
+
+/* Header */
+
+#header #logo h1 a {
+    color: inherit;
+}
+
+#header #logo h1 a span {
+    color: #5F9EA0;
 }
 
 
@@ -848,8 +872,10 @@ nav ol {
 }
 
 #breadcrumb .heading {
+    /* margin: 0 0 100px 0; */
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
 
@@ -1174,6 +1200,11 @@ textarea:focus,
 .row0 {
     color: #474747;
     background-color: #f4f4f4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: auto;
 }
 
 .row1 {
@@ -1228,13 +1259,6 @@ textarea:focus,
 #topbar #searchform button {
     color: #ffffff;
     background: transparent;
-}
-
-
-/* Header */
-
-#header #logo h1 a {
-    color: inherit;
 }
 
 
@@ -1623,5 +1647,8 @@ table a,
     }
     .font-x3 {
         font-size: 1.6rem;
+    }
+    .fl_right {
+        display: none;
     }
 }
